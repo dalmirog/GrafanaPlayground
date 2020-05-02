@@ -1,0 +1,21 @@
+version: '2.0'
+services: 
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3000:3000"    
+    networks: 
+      - grafana-network
+  mysql:    
+    build: 
+      context: .        
+      dockerfile: .docker/mysql.dockerfile
+    ports:
+      - "3308:3306"
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always    
+    networks: 
+      - grafana-network
+networks: 
+    grafana-network:
+      driver: bridge
