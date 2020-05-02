@@ -1,9 +1,11 @@
 ## Running the Containers
 
 1) Build the containers
+
 `sudo docker-compose build`
 
 2) Spin up the containers 
+
 `sudo docker-compose up`
 
 3) Load the `world` database
