@@ -6,7 +6,7 @@
 
 2) Spin up the containers 
 
-`sudo docker-compose up`
+`sudo docker-compose up -d`
 
 3) Load the `world` database
 
